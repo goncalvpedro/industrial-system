@@ -4,6 +4,9 @@
 
 O aplicativo Apontamento é um aplicativo desktop projetado para rastrear dados de produção, incluindo defeitos e tipos de refugo, em um ambiente de manufatura. Ele permite que os usuários insiram várias métricas de produção e visualizem os últimos 10 registros para facilitar o monitoramento e análise.
 
+![Window](/static/gui.png)
+
+
 ## Tecnologias Utilizadas
 
 - **Python**: A linguagem principal utilizada para o desenvolvimento do aplicativo.
