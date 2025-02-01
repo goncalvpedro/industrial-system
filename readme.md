@@ -1,59 +1,65 @@
-# Apontamento Application
+# Registro de Produção
 
-## Overview
+## Visão Geral
 
-The Apontamento Application is a desktop application designed for tracking production data, including defects and scrap types, in a manufacturing environment. It allows users to input various production metrics and view the last 10 registrations for easy monitoring and analysis.
+O aplicativo Apontamento é um aplicativo desktop projetado para rastrear dados de produção, incluindo defeitos e tipos de refugo, em um ambiente de manufatura. Ele permite que os usuários insiram várias métricas de produção e visualizem os últimos 10 registros para facilitar o monitoramento e análise.
 
-## Technology Stack
+## Tecnologias Utilizadas
 
-- **Python**: The primary programming language used for developing the application.
-- **PyQt5**: A set of Python bindings for Qt libraries, used for creating the graphical user interface (GUI).
-- **SQLite**: A lightweight database engine used for storing production data locally.
-- **datetime**: A built-in Python module for handling date and time operations.
+- **Python**: A linguagem principal utilizada para o desenvolvimento do aplicativo.
+- **PyQt5**: Um conjunto de bindings do Python para as bibliotecas Qt, utilizado para criar a interface gráfica do usuário (GUI).
+- **SQLite**: Um banco de dados leve utilizado para armazenar os dados de produção localmente.
+- **datetime**: Um módulo embutido do Python para manipulação de datas e horários.
 
-## Features
+## Funcionalidades
 
-- **Data Input**: Users can input various production metrics, including:
-  - Date of the production entry
-  - Shift (Turno)
-  - Process (Processo)
-  - Machine (Máquina)
-  - Reference (Referência)
-  - Quantity Produced (Quantidade Produzida)
-  - Refugos (Scrap)
-  - Defects (Defeitos) with associated types
+- **Entrada de Dados**: Os usuários podem inserir diversas métricas de produção, incluindo:
+  - Data da entrada de produção
+  - Turno
+  - Processo
+  - Máquina
+  - Referência
+  - Quantidade Produzida
+  - Refugos
+  - Defeitos e seus tipos associados
 
-- **Data Storage**: All input data is stored in a local SQLite database, allowing for persistent data management.
+- **Armazenamento de Dados**: Todos os dados inseridos são armazenados em um banco de dados SQLite local, permitindo a gestão persistente dos dados.
 
-- **View Last Registrations**: Users can view the last 10 registrations in a dedicated window, providing quick access to recent production data.
+- **Visualização dos Últimos Registros**: Os usuários podem visualizar os últimos 10 registros em uma janela dedicada, proporcionando acesso rápido aos dados recentes de produção.
 
-- **Input Validation**: The application includes input validation to ensure that all required fields are filled out correctly before submission.
+- **Validação de Entrada**: O aplicativo inclui validação de entrada para garantir que todos os campos obrigatórios sejam preenchidos corretamente antes do envio.
 
-- **Clear Form**: Users can clear the input form after submitting data, making it easy to enter new records.
+- **Limpar Formulário**: Os usuários podem limpar o formulário de entrada após o envio dos dados, facilitando a inserção de novos registros.
 
-## Possible Further Improvements
+## Possíveis Melhorias Futuras
 
-- **User  Authentication**: Implement user authentication to restrict access to the application and maintain data integrity.
+- **Autenticação de Usuário**: Implementar autenticação de usuário para restringir o acesso ao aplicativo e manter a integridade dos dados.
 
-- **Data Visualization**: Add charts and graphs to visualize production metrics over time, helping users identify trends and patterns.
+- **Visualização de Dados**: Adicionar gráficos e tabelas para visualizar as métricas de produção ao longo do tempo, ajudando os usuários a identificar tendências e padrões.
 
-- **Export Functionality**: Implement functionality to export data to CSV or Excel formats for reporting and analysis.
+- **Funcionalidade de Exportação**: Implementar a funcionalidade de exportar dados para os formatos CSV ou Excel para relatórios e análise.
 
-- **Enhanced Error Handling**: Improve error handling to provide more informative messages and prevent application crashes.
+- **Melhoria no Tratamento de Erros**: Aprimorar o tratamento de erros para fornecer mensagens mais informativas e evitar falhas no aplicativo.
 
-- **Unit Testing**: Add unit tests to ensure the reliability and stability of the application.
+- **Testes Unitários**: Adicionar testes unitários para garantir a confiabilidade e estabilidade do aplicativo.
 
-- **Multi-language Support**: Implement multi-language support to cater to a broader audience.
+- **Suporte Multilíngue**: Implementar suporte a múltiplos idiomas para atender a um público mais amplo.
 
-- **Deployment**: Create an installer for easy deployment on different operating systems.
+- **Implantação**: Criar um instalador para facilitar a distribuição e instalação do aplicativo em diferentes sistemas operacionais.
 
-## Installation
+## Instalação
 
-To run the application, ensure you have Python and the required libraries installed. You can install the necessary packages using pip:
+Para executar o aplicativo, certifique-se de ter o Python e as bibliotecas necessárias instaladas. Você pode instalar os pacotes necessários usando o pip:
 
 ```bash
 pip install PyQt5
-git clone https://github.com/yourusername/apontamento.git
+```
+
+Em seguida, clone o repositório e execute o aplicativo:
+
+```bash
+git clone https://github.com/seuusuario/apontamento.git
 cd apontamento
 python gui.py
-´´´
+```
+
