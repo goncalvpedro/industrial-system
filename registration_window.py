@@ -8,12 +8,10 @@ class RegistrationWindow(QtWidgets.QWidget):
         self.setWindowTitle("Últimos 10 Registros")
         self.setGeometry(100, 100, 600, 400)
 
-        # Create layout
         layout = QtWidgets.QVBoxLayout()
 
-        # Create a table to display registrations
         self.table = QtWidgets.QTableWidget(self)
-        self.table.setColumnCount(8)  # Adjust based on the number of fields
+        self.table.setColumnCount(8)
         self.table.setHorizontalHeaderLabels(["Data", "Turno", "Processo", "Máquina", "Referência", "Refugos", "Produção", "Defeitos"])
         layout.addWidget(self.table)
 
@@ -21,7 +19,6 @@ class RegistrationWindow(QtWidgets.QWidget):
         self.load_data()
 
     def load_data(self):
-        # Fetch the last 10 registrations from the database
         db = Database()
         registrations = db.get_last_registrations(10)
 

@@ -7,7 +7,6 @@ class Database:
         self.create_table()
 
     def create_table(self):
-        # Create table if it doesn't exist
         self.cursor.execute('''
             CREATE TABLE IF NOT EXISTS apontamento (
                 id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -26,7 +25,6 @@ class Database:
         self.conn.commit()
 
     def insert_data(self, data, turno, processo, maquina, referencia, refugo, producao, defect, scrap_type):
-        # Insert a single defect into the SQLite database
         self.cursor.execute('''
             INSERT INTO apontamento (data, turno, processo, maquina, referencia, refugo, producao, defeitos, scrap_type)
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
@@ -34,11 +32,14 @@ class Database:
         self.conn.commit()
 
     def get_last_registrations(self, limit):
-        # Fetch the last 'limit' registrations from the database
         query = "SELECT data, turno, processo, maquina, referencia, refugo, producao, defeitos FROM apontamento ORDER BY id DESC LIMIT ?"
         self.cursor.execute(query, (limit,))
         return self.cursor.fetchall()
+    
+    def read_data(self):
+        query = "SELECT * FROM apontamento ORDER BY id DESC"
+        self.cursor.execute(query)
+        return self.cursor.fetchall()
 
     def close(self):
-        # Close the database connection
         self.conn.close()

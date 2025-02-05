@@ -6,7 +6,6 @@ O aplicativo Apontamento é um aplicativo desktop projetado para rastrear dados 
 
 ![Window](/static/gui.png)
 
-
 ## Tecnologias Utilizadas
 
 - **Python**: A linguagem principal utilizada para o desenvolvimento do aplicativo.
